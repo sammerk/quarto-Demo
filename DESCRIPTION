@@ -12,3 +12,5 @@ Depends:
     rmarkdown
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/sammerk/quarto-Demo
+BugReports: https://github.com/sammerk/quarto-Demo/issues
