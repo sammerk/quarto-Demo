@@ -1,0 +1,41 @@
+---
+title: Confirmatory Factor Analysis
+format: html
+bibliography: references.bib
+---
+
+## Data
+
+As the data is openly licend available on github, we can directly download it.
+
+```{r}
+cfa_data <-
+  read.csv(
+    paste0(
+      "https://raw.githubusercontent.com/",
+      "sammerk/did_data/master/cfadata.csv"
+    )
+  )
+```
+
+## Particpants
+
+In the study *N* = `{r} nrow(cfa_data)` students participated.
+
+## Measurement
+
+We assessed the two independet variables risk and adjustment with three indicators each using $\tau$-generic measurement models.
+
+```{r}
+#| warning: false
+library(lavaan)
+model <- 
+    "adjustment =~ motiv + harm + stabi
+     risk =~ ppsych + ses + verbal"
+
+model_fitted <- cfa(model, data = cfa_data)
+
+model_fit <- fitmeasures(model_fitted)
+```
+
+This resulted in fitindices beyond the often arbitraryly used  [@mcneish2021] benchmarks (CFI = `{r} round(model_fit["cfi"], 3)`)
