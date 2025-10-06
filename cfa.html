@@ -171,10 +171,8 @@ window.Quarto = {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"adjustment =~ motiv + harm + stabi</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">     risk =~ ppsych + ses + verbal"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>model_fitted <span class="ot">&lt;-</span> <span class="fu">cfa</span>(model, <span class="at">data =</span> cfa_data)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>model_fit <span class="ot">&lt;-</span> <span class="fu">fitmeasures</span>(model_fitted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>model_fitted <span class="ot">&lt;-</span> <span class="fu">cfa</span>(model, <span class="at">data =</span> cfa_data)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>model_fit <span class="ot">&lt;-</span> <span class="fu">fitmeasures</span>(model_fitted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This resulted in fitindices beyond the often arbitraryly used <span class="citation" data-cites="mcneish2021">(<a href="#ref-mcneish2021" role="doc-biblioref">McNeish and Wolf 2021</a>)</span> benchmarks (CFI = 0.994)</p>
 

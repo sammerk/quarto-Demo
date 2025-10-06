@@ -5,7 +5,6 @@ bibliography: references.bib
 ---
 
 ## Data
-
 As the data is openly licend available on github, we can directly download it.
 
 ```{r}
@@ -19,11 +18,9 @@ cfa_data <-
 ```
 
 ## Particpants
-
 In the study *N* = `{r} nrow(cfa_data)` students participated.
 
 ## Measurement
-
 We assessed the two independet variables risk and adjustment with three indicators each using $\tau$-generic measurement models.
 
 ```{r}
@@ -32,9 +29,7 @@ library(lavaan)
 model <- 
     "adjustment =~ motiv + harm + stabi
      risk =~ ppsych + ses + verbal"
-
 model_fitted <- cfa(model, data = cfa_data)
-
 model_fit <- fitmeasures(model_fitted)
 ```
 
